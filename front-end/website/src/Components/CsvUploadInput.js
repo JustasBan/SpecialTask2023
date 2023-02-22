@@ -48,12 +48,13 @@ function CsvUploadInput() {
                 await axios.post('http://localhost:8080/upload', formData);
                 setFeedbackMsg("successful CSV upload to server");
                 setClicked(true)
-            } catch (error) {
+            }
+            catch (error) {
                 setClicked(true)
-                if(String(error.response.data).includes('Error uploading file')){
+                if (String(error.response.data).includes('Error uploading file')) {
                     setFeedbackMsg("File contains invalid data")
                 }
-                else{
+                else {
                     setFeedbackMsg("server error, try again later...")
                 }
                 console.error('Error uploading file:', error);

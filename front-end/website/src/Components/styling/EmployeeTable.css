@@ -4,19 +4,20 @@ table {
     margin: 0 auto;
     margin-top: 20px;
     max-width: 600px;
-  }
-  
-  th, td {
+}
+
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
-  }
-  
-  th {
+}
+
+th {
     background-color: #4b4949;
     color: white;
-  }
-  
-  tr:nth-child(even) {
+}
+
+tr:nth-child(even) {
     background-color: #f2f2f2;
-  }
+}
