@@ -1,0 +1,8 @@
+.headerClass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    font-size: 29px;
+    margin-bottom: 25px;
+}

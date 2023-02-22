@@ -74,5 +74,8 @@ public class Employee {
 		 Matcher matcher = pattern.matcher(phoneNumber);
 		 return matcher.matches();
 	}
+	public Long getId() {
+		return id;
+	}
 	
 }

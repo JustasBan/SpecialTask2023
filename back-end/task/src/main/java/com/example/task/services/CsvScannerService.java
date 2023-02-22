@@ -1,5 +1,6 @@
 package com.example.task.services;
 
+import org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -26,7 +27,7 @@ public class CsvScannerService implements IcsvScannerService {
     }
 
 	@Override
-	public void importEmployeesFromCsvFile(MultipartFile file) throws CsvValidationException, IOException {
+	public void importEmployeesFromCsvFile(MultipartFile file) throws CsvValidationException, IOException, JdbcSQLIntegrityConstraintViolationException {
 
 		Reader reader = null;
 		try {
@@ -38,6 +39,7 @@ public class CsvScannerService implements IcsvScannerService {
 	    CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(0).build();
 	    
 	    String[] nextRecord;
+	    //TODO: get records which violated rules and inform front-end about them
         while ((nextRecord = csvReader.readNext()) != null) {
             Employee employee = new Employee();
             employee.setName(nextRecord[0]);
