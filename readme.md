@@ -1,4 +1,7 @@
 # Sourcery Academy 2023 special task
+Project files can be found in _"back-end/task"_ directory for __back-end__ & _"front-end/website"_ directory for __front-end__ 
+
+
 ## Launch instructions:
 Use provided steps to launch project. 
 ### 1. Back-end:
@@ -28,9 +31,10 @@ $ npm start
 
 _Side note: Front-end is based on React, Axios, serve(for production deployment)_ 
 
-## Notes on project:\
+## Notes on project:
+
 There remains TODOs, which make project faulty and not ready for deployment. \
-Example 1: if there is one faulty data field (let's say invalid email format) in .csv file, API doesn't communicate to front-end, so user only knows that there was "Server error"
-Example 2: end user should know, which user is faulty, for easier data fixing
-Example 3: API doesn't communicate, that employee exists with identical email or phone number, so front-end only receives "server error"
+__Example 1__: if there is one faulty data field (let's say invalid email format) in .csv file, API doesn't communicate to front-end, so user only knows that there was "Server error" \
+__Example 2__: end user should know, which user is faulty, for easier data fixing \
+__Example 3__: API doesn't communicate, that employee exists with identical email or phone number, so front-end only receives "server error"
 
